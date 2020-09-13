@@ -1,13 +1,51 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  margin:0;
+  padding:0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
+}
+
+.search-bar{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.Clouds, .Mist, .Haze, .Smoke, .Fog{
+	font-size: 50px;
+	color: #546e7a;
+}
+
+.Rain, .Drizzle{
+	font-size: 50px;
+	color: #90caf9;
+}
+
+.Thunderstorm{
+	font-size: 50px;
+	color: #546e7a;
+}
+
+.Clear{
+	font-size: 50px;
+	color: #FFC107;
+}
+
+.Clouds-morning{
+	font-size: 50px;
+	color: #90caf9;
+}
+
+.night{
+  color: #546e7a;
+	font-size: 50px;
+}
+
+.flag{
+  margin-bottom:5px;
+  margin-left: 5px;
 }
