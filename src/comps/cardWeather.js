@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
         // marginTop: theme.spacing(0.5),
         width: theme.spacing(4),
         height: theme.spacing(4),
+        marginLeft: theme.spacing(0.2)
     },
     location:{
         display:'flex',
@@ -175,9 +176,10 @@ export default function CardWeather({ weather }){
                                     <Typography gutterBottom variant="h5" component="h2" style={{fontWeight:'400', marginRight:'4px'}}>
                                     {weather.name}, {weather.country}
                                     </Typography>
-                                    <div classNam="flag">
+                                    {/* <div classNam="flag">
                                         <img className="flag-icon" src={`https://www.countryflags.io/${weather.country}/flat/32.png`}/>
-                                    </div>
+                                    </div> */}
+                                    <Avatar className={classes.flagIcon} alt={weather.ca} src={`https://disease.sh/assets/img/flags/${weather.country.toLowerCase()}.png`}/>
                                 </div>
                                 <div className={classes.time}>
                                     <Typography variant="subtitle1" color="textSecondary">

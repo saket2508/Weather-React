@@ -62,7 +62,6 @@ function App() {
         })
         let res = await fetch(`${api.base}?lat=${latitude}&lon=${longitude}&units=${system}&appid=${api.key}`)
         let result = await res.json()
-        console.log(result)
         console.log('Sunrise- '+getTime(result.city.sunrise, result.city.timezone))
         console.log('Sunset- '+getTime(result.city.sunset, result.city.timezone))
         
@@ -307,9 +306,17 @@ function App() {
     let utc = (local_date.getTime() + (local_date.getTimezoneOffset()*60*1000));
     let nd = new Date(utc+(offset*1000))
     let day = nd.getDate()
-    let hour = nd.getHours()
+    let hour = nd.getHours().toString()
+    if(hour.toString().length===1){
+      hour = "0"+hour
+    }
+    let mins = nd.getMinutes().toString()
+    if(mins.length===1){
+      mins= "0"+mins
+    }
     let month = months[nd.getMonth()]
     console.log(nd.toLocaleTimeString())
+    console.log('Hour is: '+ nd.getHours() + ' Minutes is: '+ nd.getMinutes())
     let suffix = nd.toLocaleTimeString().slice(-2)
 
     if(hour > 18 || hour < 6){
@@ -327,7 +334,7 @@ function App() {
     }
 
     console.log(time+' '+suffix)
-    setLocalTime(month+" "+ day + ", "+ time+' '+suffix)
+    setLocalTime(month+" "+ day + ", "+ hour+":"+mins)
   }
 
 

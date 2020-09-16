@@ -30,13 +30,13 @@ const CardLoading = () => {
                 >
                 <Grid item xs={10} sm={8} md={5}>
                     <Card>
+                        <Skeleton variant="rect" animation="wave" height={200} width="100%" style={{ marginBottom: 6 }} />
                          <CardContent>
                                 <React.Fragment>
-                                <Skeleton animation="wave" height={200} width="100%" style={{ marginBottom: 6 }} />
                                     <div style={{marginBottom:"10px"}}>
                                         <Skeleton animation="wave" height={20} width="40%"/>
-                                        <Skeleton animation="wave" height={10} width="40%" />
-                                        <Skeleton animation="wave" height={10} width="40%" />
+                                        <Skeleton animation="wave" height={10} width="30%" />
+                                        <Skeleton animation="wave" height={10} width="30%" />
                                     </div>
                                     <div style={{marginBottom:"10px"}}>
                                         <Skeleton animation="wave" height={30} width="100%"/>
